@@ -1,12 +1,12 @@
 // import MainLayout from "../../layout/MainLayout";
-import Timer from "../../components/Timer";
+import CountDown from "../../components/CountDown";
 
 import "./Home.css";
 
 function Home() {
   return (
     <>
-      <Timer />
+      <CountDown />
     </>
   );
 }
