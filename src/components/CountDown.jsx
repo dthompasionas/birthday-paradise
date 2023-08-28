@@ -1,3 +1,5 @@
+import "./CountDown.css";
+
 function CountDown() {
   // Set the date we're counting down to
   const countDownDate = new Date("Sept 18, 2023 04:30:00").getTime();
@@ -34,21 +36,26 @@ function CountDown() {
   return (
     <>
       <div className="content">
-        <h1>Carmens Birthday Paradise</h1>
+        <div className="title-container">
+          <h3>Carmen's</h3>
+          <h1>
+            Birthday <span>Paradise</span>
+          </h1>
+        </div>
         <div className="countdown-wrapper">
-          <div className="days-container">
+          <div className="time-container">
             <p id="days"></p>
             <span>Days</span>
           </div>
-          <div className="hour-container">
+          <div className="time-container">
             <p id="hours"></p>
             <span>Hours</span>
           </div>
-          <div className="minute-container">
+          <div className="time-container">
             <p id="minutes"></p>
             <span>Minutes</span>
           </div>
-          <div className="second-container">
+          <div className="time-container">
             <p id="seconds"></p>
             <span>Seconds</span>
           </div>
