@@ -1,3 +1,5 @@
+import ScrollReveal from "scrollreveal";
+
 import "./CountDown.css";
 
 function CountDown() {
@@ -33,12 +35,27 @@ function CountDown() {
       document.getElementById("seconds").innerHTML = "00";
     }
   }, 1000);
+
+  // scroll reveal
+
+  const sr = ScrollReveal({
+    distance: "65px",
+    duration: 2600,
+    delay: 450,
+    reset: true,
+  });
+
+  sr.reveal(".birthday-paradise", { delay: 350, origin: "left" });
+  sr.reveal(".countdown-wrapper", { delay: 500, origin: "top" });
+  sr.reveal(".mom", { delay: 200, origin: "right" });
+  // sr.reveal(".birthday-paradise", { delay: 200, origin: "left" });
+
   return (
     <>
       <div className="content">
         <div className="title-container">
-          <h3>Carmen's</h3>
-          <h1>
+          <h3 className="mom">Carmen's</h3>
+          <h1 className="birthday-paradise">
             Birthday <span>Paradise</span>
           </h1>
         </div>
