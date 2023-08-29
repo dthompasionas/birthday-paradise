@@ -2,6 +2,15 @@ import ScrollReveal from "scrollreveal";
 
 import "./CountDown.css";
 
+// adds a 0 in front of the number if a single digit
+function formatTime(time) {
+  if (time < 10) {
+    return "0" + time;
+  } else {
+    return time;
+  }
+}
+
 function CountDown() {
   // Set the date we're counting down to
   const countDownDate = new Date("Sept 18, 2023 04:30:00").getTime();
@@ -21,11 +30,11 @@ function CountDown() {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // setting the time variables into the html
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    // setting the time variables into the html than adding the formatting
+    document.getElementById("days").innerHTML = formatTime(days);
+    document.getElementById("hours").innerHTML = formatTime(hours);
+    document.getElementById("minutes").innerHTML = formatTime(minutes);
+    document.getElementById("seconds").innerHTML = formatTime(seconds);
 
     if (distance < 0) {
       clearInterval(x);
@@ -45,9 +54,9 @@ function CountDown() {
     reset: true,
   });
 
-  sr.reveal(".birthday-paradise", { delay: 350, origin: "left" });
-  sr.reveal(".countdown-wrapper", { delay: 500, origin: "top" });
-  sr.reveal(".mom", { delay: 200, origin: "right" });
+  sr.reveal(".birthday-paradise", { delay: 100, origin: "left" });
+  sr.reveal(".countdown-wrapper", { delay: 700, origin: "top" });
+  sr.reveal(".mom", { delay: 100, origin: "right" });
   // sr.reveal(".birthday-paradise", { delay: 200, origin: "left" });
 
   return (
