@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
 import "./CountDown.css";
@@ -47,17 +48,17 @@ function CountDown() {
 
   // scroll reveal
 
-  const sr = ScrollReveal({
-    distance: "65px",
-    duration: 2600,
-    delay: 450,
-    reset: true,
-  });
+  useEffect(() => {
+    const sr = ScrollReveal({
+      reset: true,
+      duration: 1000,
+      distance: "65px",
+    });
 
-  sr.reveal(".birthday-paradise", { delay: 100, origin: "left" });
-  sr.reveal(".countdown-wrapper", { delay: 700, origin: "top" });
-  sr.reveal(".mom", { delay: 100, origin: "right" });
-  // sr.reveal(".birthday-paradise", { delay: 200, origin: "left" });
+    sr.reveal(".birthday-paradise", { delay: 200, origin: "bottom" });
+    sr.reveal(".countdown-wrapper", { delay: 900, origin: "left" });
+    sr.reveal(".mom", { delay: 200, origin: "top" });
+  }, []);
 
   return (
     <>

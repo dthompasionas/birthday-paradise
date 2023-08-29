@@ -23,6 +23,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   /* color: #fff; */
 }
 
@@ -56,7 +57,7 @@
   flex-wrap: wrap;
   padding: 3px 15px 15px;
   /* justify-content: space-evenly; */
-  margin-top: 20px;
+  /* margin-top: 20px; */
   justify-content: center;
 }
 
